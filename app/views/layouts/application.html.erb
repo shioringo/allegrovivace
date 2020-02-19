@@ -9,10 +9,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="min-vh-100 w-100">
-    <nav class="navbar navbar-light">
-      <a class="navbar-brand" href="/">やったことある曲りすと</a>
-    </nav>
+  <body>
+    <div class='fixed-top'>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="/">やったことある曲りすと</a>
+      </nav>
+    </div>
     <%= yield %>
+    <div class='fixed-bottom'>
+      <footer></footer>
+    </div>
   </body>
 </html>

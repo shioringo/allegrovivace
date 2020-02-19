@@ -1,14 +1,43 @@
 
 
-<div class="main-container mt-3">
-  <div class="row bg-info">
-    <div class="col-md-12">
-      <%= "#{@user.name}さんがやったことのある曲リスト" %>
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-md-11 bg-info">
+      <%= "#{@user.name}さんがやったことのある曲リスト（#{@pieces.count}曲）" %>
     </div>
   </div>
-  <div class="row bg-pink mt-2">
-    <div class="col-md-12">
-      <%= "管弦楽曲" %>
+  <div class="row mt-3">
+    <div class="col-md-9 bg-pink">
+      <%= "管弦楽曲（#{@other_pieces.count}曲）" %>
+    </div>
+  </div>
+    <% @other_pieces.each do |piece| %>
+      <div class="row mt-1">
+        <div class="col-md-4">
+          <span><%= piece.composer.name %></span>
+        </div>
+        <div class="col-md-4">
+          <span><%= piece.name %></span>
+        </div>
+      </div>
+    <% end %>
+    <div class="row mt-3">
+      <div class="col-md-9 bg-pink">
+        <%= "交響曲（#{@symphonies.count}曲）" %>
+      </div>
+    </div>
+    <% @symphonies.each do |piece| %>
+      <div class="row mt-1">
+        <div class="col-md-4">
+          <span><%= piece.composer.name %></span>
+        </div>
+        <div class="col-md-4">
+          <span><%= piece.name %></span>
+        </div>
+      </div>
+    <% end %>
+    <div class="row mt-3">
+      <div class="col-md-11 bg-info">---</div>
     </div>
   </div>
 </div>
