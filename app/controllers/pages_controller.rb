@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def index
-    @version = "1.0"
-    console
+    @user = User.find(1)
   end
 end

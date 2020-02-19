@@ -1,1 +1,32 @@
+@import "~bootstrap/scss/functions"; 
+@import "~bootstrap/scss/variables";
+
+$theme-colors: (
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "orange":     $orange,
+    "teal":       $teal
+);
+
 @import '~bootstrap/scss/bootstrap';
+
+p {
+  background: blue;
+};
+
+body::before {
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height: 100%;
+  background-position: right bottom;
+  background-image: url('../imgs/violin.png');
+  background-repeat: no-repeat;
+  background-size:30% auto;
+  
+};
